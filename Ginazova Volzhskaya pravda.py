@@ -74,6 +74,7 @@ def collect(beginning):
 
     #пытаемся поймать статью по номеру страницы на сайте
     for i in range(beginning,lastitem+1): #с задаваемой извне начальной точки до самой свежей статьи
+        time.sleep(2)
         try:
             url = 'http://gazeta-vp.ru/news/item/'+str(i)
             page = urllib.request.urlopen(url).read().decode('utf-8')
